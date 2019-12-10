@@ -7,7 +7,7 @@ My goal in making this information public is that others may setup their own rel
 
 ## Hardware
 
-The Windy Onion is a 1U [Supermicro X10SLH-LN6TF](https://www.supermicro.com/en/products/motherboard/X10SLH-F) with an [Intel Xeon E3-1270v3](https://ark.intel.com/content/www/us/en/ark/products/75056/intel-xeon-processor-e3-1270-v3-8m-cache-3-50-ghz.html) running at 3.5 GHz (with hyperthreading _disabled_) and 32 Gb of RAM.
+The Windy Onion is a 1U [Supermicro X10SLH-LN6TF](https://www.supermicro.com/en/products/motherboard/X10SLH-F) with an [Intel Xeon E3-1270v3](https://ark.intel.com/content/www/us/en/ark/products/75056/intel-xeon-processor-e3-1270-v3-8m-cache-3-50-ghz.html) running at 3.5 GHz (with hyperthreading [disabled in order to boost single-core performance](https://www.quora.com/Would-turning-off-hyper-threading-on-an-Intel-Chip-increase-single-core-performance)) and 32 Gb of RAM.
 
 ## Operating System
 

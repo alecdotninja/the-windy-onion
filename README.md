@@ -13,11 +13,19 @@ The Windy Onion is a 1U [Supermicro X10SLH-LN6TF](https://www.supermicro.com/en/
 
 In order to support more diversity among relays, The Windy Onion runs [FreeBSD 12.1](https://www.freebsd.org/).
 
+At this time, updates are applied manually:
+
+    $ sudo freebsd-update fetch
+    $ sudo freebsd-update install
+
 ## Packages
 
-Tor and [Nyx](https://nyx.torproject.org/) (a monitoring tool for Tor) are both installed and updated via the built-in package manager `pkg`:
+Tor and [Nyx](https://nyx.torproject.org/) (a monitoring tool for Tor) are both installed via the built-in package manager `pkg`:
 
     $ sudo pkg install tor nyx
+
+At this time, updates are applied manually:
+
     $ sudo pkg update
     $ sudo pkg upgrade
 

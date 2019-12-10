@@ -17,10 +17,9 @@ In order to support more diversity among relays, The Windy Onion runs [FreeBSD 1
 
 Tor and [Nyx](https://nyx.torproject.org/) (a monitoring tool for Tor) are both installed and updated via the built-in package manager `pkg`:
 
-  $ sudo pkg install tor nyx
-
-  $ sudo pkg update
-  $ sudo pkg upgrade
+    $ sudo pkg install tor nyx
+    $ sudo pkg update
+    $ sudo pkg upgrade
 
 ## Configuration
 

@@ -58,6 +58,9 @@ ExitPolicy reject 185.164.137.31:3390
 # Abuse response to "sohsllc.com"
 ExitPolicy reject 45.47.201.189:*
 
+# Abuse response to "holafabiola.com"
+ExitPolicy reject 93.93.64.45:*
+
 # SSH
 #	* Avoid hacking abuse reports
 #	* Very useful protocol, but upstream currently requires this (sadly)

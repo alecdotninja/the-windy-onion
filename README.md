@@ -7,7 +7,7 @@ My goal in making this information public is that others may setup their own rel
 
 ## Hardware
 
-The Windy Onion is a 1U [Supermicro X10SLH-LN6TF](https://www.supermicro.com/en/products/motherboard/X10SLH-F) with an [Intel Xeon E3-1270v3](https://ark.intel.com/content/www/us/en/ark/products/75056/intel-xeon-processor-e3-1270-v3-8m-cache-3-50-ghz.html) running at 3.5 GHz (with hyperthreading [disabled in order to boost single-core performance](https://www.quora.com/Would-turning-off-hyper-threading-on-an-Intel-Chip-increase-single-core-performance)) and 32 Gb of RAM.
+The Windy Onion is a 1U [Supermicro X10SLH-LN6TF](https://www.supermicro.com/en/products/motherboard/X10SLH-F) with an [Intel Xeon E3-1270v3](https://ark.intel.com/content/www/us/en/ark/products/75056/intel-xeon-processor-e3-1270-v3-8m-cache-3-50-ghz.html) running at 3.5 GHz (with hyperthreading disabled [in order to boost single-core performance](https://www.quora.com/Would-turning-off-hyper-threading-on-an-Intel-Chip-increase-single-core-performance)) and 32 Gb of RAM.
 
 ## Operating System
 
@@ -31,9 +31,11 @@ At this time, updates are applied manually:
 
 ## Configuration
 
-With the notable exception of key and login information, files which have been customized from their default are included in this repository. Of particular interest to other FreeBSD operators is probably [torrc](usr/local/etc/tor/torrc) and [sysctl.conf](etc/sysctl.conf).
+With the notable exception of key and login information, files which have been customized from their default are included in this repository. Of particular interest to other FreeBSD operators is probably [torrc](overlay/usr/local/etc/tor/torrc) and [sysctl.conf](overlay/etc/sysctl.conf).
 
 ## Deployment
+
+Run `script/deploy` to perform the deployment.
 
 Currently, all deployments must be performed manually by [me](https://keybase.io/alecdotninja); however, it should be possible to automate this process with [TravisCI](https://travis-ci.org).
 

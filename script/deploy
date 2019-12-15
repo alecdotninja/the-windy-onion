@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+set -o xtrace
+set -e
+
+# Some config
+TARGET_UESR="root"
+TARGET_HOST="the-windy-onion.tor-exits.alec.ninja"
+
+# Switch to the project path
+SCRIPT_DIR="$( dirname "${BASH_SOURCE[0]}" )"
+cd "$SCRIPT_DIR/.."
+pwd
+
+# Copy over the files
+scp -oUser="$TARGET_UESR" -r ./overlay/**/* "$TARGET_HOST:/"
+
+# Reload the configuration
+ssh -oUser="$TARGET_UESR" "$TARGET_HOST" -- service sysctl restart
+ssh -oUser="$TARGET_UESR" "$TARGET_HOST" -- service ipfw restart
+ssh -oUser="$TARGET_UESR" "$TARGET_HOST" -- service local_unbound reload
+ssh -oUser="$TARGET_UESR" "$TARGET_HOST" -- service tor reload

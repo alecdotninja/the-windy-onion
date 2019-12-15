@@ -1,4 +1,5 @@
 # The Windy Onion
+[![Deployment Status](https://travis-ci.org/PrivacyInPractice/the-windy-onion.svg?branch=master)](https://travis-ci.org/PrivacyInPractice/the-windy-onion)
 
 This repository contains information about [TheWindyOnion](https://metrics.torproject.org/rs.html#details/89094DFA4158C7A1583EC3A332CDCBC74A28CC0E) (a high-capacity [Tor relay](https://2019.www.torproject.org/about/overview.html.en#overview) in Chicago, IL).
 At the time of this writing, it is one of [the top exit nodes in the US](https://metrics.torproject.org/rs.html#search/flag:exit%20country:us).
@@ -35,9 +36,9 @@ With the notable exception of key and login information, files which have been c
 
 ## Deployment
 
-Run `script/deploy` to perform the deployment.
+The latest `master` is automatically deployed by [TravisCI](.travis.yml).
 
-Currently, all deployments must be performed manually by [me](https://keybase.io/alecdotninja); however, it should be possible to automate this process with [TravisCI](https://travis-ci.org).
+Run `script/deploy` to perform the deployment locally (this requires a [deploy key](secrets)).
 
 ## Contributing
 

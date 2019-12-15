@@ -1,21 +1,37 @@
 #!/usr/bin/env bash
-set -o xtrace
 set -e
-
-# Some config
-TARGET_UESR="root"
-TARGET_HOST="the-windy-onion.tor-exits.alec.ninja"
+set -o verbose # note: it is *very* important that this does not expose env vars since they contain secrets here!
 
 # Switch to the project path
 SCRIPT_DIR="$( dirname "${BASH_SOURCE[0]}" )"
 cd "$SCRIPT_DIR/.."
 pwd
 
+# Some config
+ENCRYPTED_DEPLOY_KEY="./secrets/deploy.key.enc"
+DEPLOY_KEY="./secrets/deploy.key"
+DEPLOY_UESR="root"
+DEPLOY_HOST="the-windy-onion.tor-exits.alec.ninja"
+
+# Decrypt the deploy key
+#   - note: `encrypted_20ad8ef80932_key` and `encrypted_20ad8ef80932_iv` are configured as secure env vars in TravisCI
+if [ ! -f "$DEPLOY_KEY" ]; then
+    openssl aes-256-cbc \
+        -K $encrypted_20ad8ef80932_key -iv $encrypted_20ad8ef80932_iv \
+        -in "$ENCRYPTED_DEPLOY_KEY" -out "$DEPLOY_KEY" -d
+
+    chmod 600 "$DEPLOY_KEY"
+fi
+
 # Copy over the files
-scp -oUser="$TARGET_UESR" -r ./overlay/**/* "$TARGET_HOST:/"
+scp -i "$DEPLOY_KEY" -oStrictHostKeyChecking=no -oUser="$DEPLOY_UESR" -r ./overlay/**/* "$DEPLOY_HOST:/"
 
 # Reload the configuration
-ssh -oUser="$TARGET_UESR" "$TARGET_HOST" -- service sysctl restart
-ssh -oUser="$TARGET_UESR" "$TARGET_HOST" -- service ipfw restart
-ssh -oUser="$TARGET_UESR" "$TARGET_HOST" -- service local_unbound reload
-ssh -oUser="$TARGET_UESR" "$TARGET_HOST" -- service tor reload
+ssh -i "$DEPLOY_KEY" -oStrictHostKeyChecking=no -oUser="$DEPLOY_UESR" "$DEPLOY_HOST" -- /bin/sh << EOF
+set -e
+set -o verbose
+service sysctl restart
+service ipfw restart
+service local_unbound reload
+service tor reload
+EOF

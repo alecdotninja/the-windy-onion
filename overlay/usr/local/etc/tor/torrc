@@ -64,6 +64,9 @@ ExitPolicy reject 93.93.64.45:*
 # Abuse response to "gzquilt.com"
 ExitPolicy reject 74.91.30.18:*
 
+# Abuse response to "cpanel6.vhosting-it.com"
+ExitPolicy reject 217.61.37.28:*
+
 # SSH
 #	* Avoid hacking abuse reports
 #	* Very useful protocol, but upstream currently requires this (sadly)

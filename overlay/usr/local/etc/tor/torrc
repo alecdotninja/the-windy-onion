@@ -70,6 +70,9 @@ ExitPolicy reject 217.61.37.28:*
 # Abuse response to "bufetedelgadolamet.com"
 ExitPolicy reject 77.81.116.196:*
 
+# Abuse response to "Daily Botnet Statistics"
+ExitPolicy reject 192.144.7.254:*
+
 # SSH
 #	* Avoid hacking abuse reports
 #	* Very useful protocol, but upstream currently requires this (sadly)

@@ -30,7 +30,7 @@ MaxAdvertisedBandwidth 80 MBytes
 ExitRelay 1
 IPv6Exit 1
 
-# Abuse response(s) to the "Financial Security Insitute of Korea"
+# Responses to abuse complaints
 ExitPolicy reject 119.192.0.0/12:*
 ExitPolicy reject 128.134.0.0/16:*
 ExitPolicy reject 210.113.0.0/16:*
@@ -39,41 +39,17 @@ ExitPolicy reject 203.233.0.0/17:*
 ExitPolicy reject 211.53.0.0/16:*
 ExitPolicy reject 210.96.128.0/17:*
 ExitPolicy reject 210.182.0.0/16:*
-
-# Abuse response to "Bobcat Open Systems"
 ExitPolicy reject 208.101.214.202:*
-
-# Abuse response to "cgtp.pt"
 ExitPolicy reject 176.9.220.168:*
-
-# Abuse response to "careerplanet.org"
 ExitPolicy reject 184.154.157.98:*
-
-# Abuse response to "universozelda.com"
 ExitPolicy reject 93.93.68.217:*
-
-# Abuse response to "botnet-tracker.blogspot.com"
 ExitPolicy reject 185.164.137.31:3390
-
-# Abuse response to "sohsllc.com"
 ExitPolicy reject 45.47.201.189:*
-
-# Abuse response to "holafabiola.com"
 ExitPolicy reject 93.93.64.45:*
-
-# Abuse response to "gzquilt.com"
 ExitPolicy reject 74.91.30.18:*
-
-# Abuse response to "cpanel6.vhosting-it.com"
 ExitPolicy reject 217.61.37.28:*
-
-# Abuse response to "bufetedelgadolamet.com"
 ExitPolicy reject 77.81.116.196:*
-
-# Abuse response to "Daily Botnet Statistics"
 ExitPolicy reject 192.144.7.254:*
-
-# Abuse response
 ExitPolicy reject 81.24.185.0/24:21
 
 # SSH

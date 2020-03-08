@@ -1,5 +1,5 @@
 # The Windy Onion
-[![Deployment Status](https://img.shields.io/travis/PrivacyInPractice/the-windy-onion?label=Deployment)](https://travis-ci.org/PrivacyInPractice/the-windy-onion)
+[![Deployment Status](https://img.shields.io/travis/alecdotninja/the-windy-onion?label=Deployment)](https://travis-ci.org/alecdotninja/the-windy-onion)
 [![Tor Relay Status](https://img.shields.io/badge/Tor%20Relay-89094DFA4158C7A1583EC3A332CDCBC74A28CC0E-%237d4698)](https://metrics.torproject.org/rs.html#details/89094DFA4158C7A1583EC3A332CDCBC74A28CC0E)
 
 This repository contains information about [TheWindyOnion](https://metrics.torproject.org/rs.html#details/89094DFA4158C7A1583EC3A332CDCBC74A28CC0E) (a high-capacity [Tor relay](https://2019.www.torproject.org/about/overview.html.en#overview) in Chicago, IL).
@@ -43,7 +43,7 @@ Run `script/deploy` to perform the deployment locally (this requires a [deploy k
 
 ## Contributing
 
-Bug reports and pull requests are welcome on [GitHub](https://github.com/PrivacyInPractice/the-windy-onion).
+Bug reports and pull requests are welcome on [GitHub](https://github.com/alecdotninja/the-windy-onion).
 
 ## License
 

@@ -24,7 +24,7 @@ if [ ! -f "$DEPLOY_KEY" ]; then
 fi
 
 # Copy over the files
-scp -i "$DEPLOY_KEY" -oStrictHostKeyChecking=no -oUser="$DEPLOY_UESR" -r ./overlay/**/* "$DEPLOY_HOST:/"
+scp -i "$DEPLOY_KEY" -oStrictHostKeyChecking=no -oUser="$DEPLOY_UESR" -r ./overlay/* "$DEPLOY_HOST:/"
 
 # Reload the configuration
 ssh -i "$DEPLOY_KEY" -oStrictHostKeyChecking=no -oUser="$DEPLOY_UESR" "$DEPLOY_HOST" -- /bin/sh << EOF

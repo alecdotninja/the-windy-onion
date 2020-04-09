@@ -10,15 +10,15 @@ HardwareAccel 1
 
 SocksPort 0
 
-ControlPort 127.0.0.1:9051
+ControlPort 127.0.0.1:9052
 CookieAuthentication 1
 DataDirectoryGroupReadable 1
 
-DirPort 167.88.7.134:80
+DirPort 167.88.7.134:9030
 DirPortFrontPage /usr/local/etc/tor/tor-exit-notice.html
 
-ORPort 167.88.7.134:443
-ORPort [2602:ffc8:1:18::1337]:443
+ORPort 167.88.7.134:9001
+ORPort [2602:ffc8:1:18::1337]:9001
 
 OutboundBindAddress 167.88.7.134
 OutboundBindAddress [2602:ffc8:1:18::1337]

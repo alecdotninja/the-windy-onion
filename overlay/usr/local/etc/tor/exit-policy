@@ -1,0 +1,56 @@
+# Responses to abuse complaints
+ExitPolicy reject 119.192.0.0/12:*
+ExitPolicy reject 128.134.0.0/16:*
+ExitPolicy reject 210.113.0.0/16:*
+ExitPolicy reject 222.231.0.0/18:*
+ExitPolicy reject 203.233.0.0/17:*
+ExitPolicy reject 211.53.0.0/16:*
+ExitPolicy reject 210.96.128.0/17:*
+ExitPolicy reject 210.182.0.0/16:*
+ExitPolicy reject 208.101.214.202:*
+ExitPolicy reject 176.9.220.168:*
+ExitPolicy reject 184.154.157.98:*
+ExitPolicy reject 93.93.68.217:*
+ExitPolicy reject 185.164.137.31:3390
+ExitPolicy reject 45.47.201.189:*
+ExitPolicy reject 93.93.64.45:*
+ExitPolicy reject 74.91.30.18:*
+ExitPolicy reject 217.61.37.28:*
+ExitPolicy reject 77.81.116.196:*
+ExitPolicy reject 192.144.7.254:*
+ExitPolicy reject 81.24.185.0/24:21
+ExitPolicy reject 178.63.119.153:*
+ExitPolicy reject 66.23.246.124:*
+ExitPolicy reject 140.238.172.100:*
+ExitPolicy reject 66.23.246.124:*
+ExitPolicy reject 103.253.40.164:*
+ExitPolicy reject 45.138.96.240:*
+ExitPolicy reject 140.238.215.81:*
+
+# SSH
+#	* Avoid hacking abuse reports
+#	* Very useful protocol, but upstream currently requires this (sadly)
+ExitPolicy reject *:22
+
+# SMTP
+#	* Avoid SPAM abuse reports
+#	* Not useful from a well-known exit node anyway
+ExitPolicy reject *:25
+ExitPolicy reject *:465
+ExitPolicy reject *:587
+
+# USENET
+#	* Avoid SPAM abuse reports
+#	* Not useful from a well-known exit node anyway
+ExitPolicy reject *:119
+ExitPolicy reject *:563
+
+# Windows RPC / NetBIOS
+#	* Avoid hacking abuse reports
+#	* Not generally useful outside of a LAN anyway
+ExitPolicy reject *:135-139
+ExitPolicy reject *:445
+
+# Allow all other traffic by default
+ExitPolicy accept *:*
+

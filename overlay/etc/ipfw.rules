@@ -78,7 +78,7 @@ ipfw add deny tcp from any to any 25,465,587
 # allow all external TCP connections and incoming TCP connections on certain ports *without the need for (costly) dynamic state tables*
 ipfw add pass tcp from any to any established
 ipfw add pass tcp from me to any setup
-ipfw add pass tcp from any to me 22,80,443,9001,9030 setup
+ipfw add pass tcp from any to me 22,80,443,9001 setup
 
 # allow external UDP connections with dynamic state tables (this won't happen often)
 ipfw add check-state

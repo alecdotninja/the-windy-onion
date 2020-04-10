@@ -1,33 +1,5 @@
-Nickname TheWindyOnion
-Address the-windy-onion.tor-exits.alec.ninja
-ContactInfo Alec <tor DASH operator AT alec DOT ninja>
+%include /usr/local/etc/tor/torrc-common
 
-Log notice file /var/log/tor/notices.log
-
-MaxMemInQueues 16 GB
-NumCPUs 2
-HardwareAccel 1
-
-SocksPort 0
-
-ControlPort 127.0.0.1:9052
-CookieAuthentication 1
-DataDirectoryGroupReadable 1
-
-DirPort 167.88.7.134:9030
-DirPortFrontPage /usr/local/etc/tor/tor-exit-notice.html
-
+DirPort [2602:ffc8:1:18::1337]:80
 ORPort 167.88.7.134:9001
 ORPort [2602:ffc8:1:18::1337]:9001
-
-OutboundBindAddress 167.88.7.134
-OutboundBindAddress [2602:ffc8:1:18::1337]
-
-BandwidthRate 80 MBytes
-BandwidthBurst 1 GBits
-MaxAdvertisedBandwidth 80 MBytes
-
-ExitRelay 1
-IPv6Exit 1
-
-%include /usr/local/etc/tor/exit-policy

@@ -1,3 +1,32 @@
+# This file contains the common configuration between all running instances on this server.
+
+Nickname TheWindyOnion
+Address the-windy-onion.tor-exits.alec.ninja
+ContactInfo Alec <tor DASH operator AT alec DOT ninja>
+
+MyFamily 89094DFA4158C7A1583EC3A332CDCBC74A28CC0E,7F53898D85C1840063B2FE567B233C098402F758
+
+Log notice file /var/log/tor/notices.log
+
+MaxMemInQueues 16 GB
+NumCPUs 8
+HardwareAccel 1
+
+SocksPort 0
+ControlPort 0
+
+DirPortFrontPage /usr/local/etc/tor/tor-exit-notice.html
+
+OutboundBindAddress 167.88.7.134
+OutboundBindAddress [2602:ffc8:1:18::1337]
+
+BandwidthRate 80 MBytes
+BandwidthBurst 1 GBits
+MaxAdvertisedBandwidth 80 MBytes
+
+ExitRelay 1
+IPv6Exit 1
+
 # Responses to abuse complaints
 ExitPolicy reject 119.192.0.0/12:*
 ExitPolicy reject 128.134.0.0/16:*

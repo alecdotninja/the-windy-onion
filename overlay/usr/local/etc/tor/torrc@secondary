@@ -1,5 +1,5 @@
 %include /usr/local/etc/tor/torrc-common
 
-DirPort [2602:ffc8:1:18::1337]:80
+DirPort 167.88.7.134:9030
 ORPort 167.88.7.134:9001
 ORPort [2602:ffc8:1:18::1337]:9001

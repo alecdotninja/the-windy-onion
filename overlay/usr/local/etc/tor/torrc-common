@@ -68,6 +68,16 @@ ExitPolicy reject 95.216.57.23:*
 ExitPolicy reject 103.205.143.221:*
 ExitPolicy reject 219.91.62.21:*
 ExitPolicy reject 51.75.33.72:*
+ExitPolicy reject 23.95.215.146:*
+ExitPolicy reject 104.140.67.138:*
+ExitPolicy reject 219.91.85.19:*
+ExitPolicy reject 219.91.61.81:*
+ExitPolicy reject 219.91.63.20:*
+ExitPolicy reject 219.91.60.99:*
+ExitPolicy reject 219.91.60.59:*
+ExitPolicy reject 140.238.215.81:*
+ExitPolicy reject 140.238.172.100:*
+ExitPolicy reject 140.238.172.100:*
 
 # SSH
 #	* Avoid hacking abuse reports

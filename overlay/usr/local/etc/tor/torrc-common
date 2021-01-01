@@ -293,6 +293,7 @@ ExitPolicy reject 91.107.129.80:1080
 ExitPolicy reject 91.107.129.81:1080
 ExitPolicy reject 91.107.129.82:1080
 ExitPolicy reject 150.116.86.180:*
+ExitPolicy reject 51.75.33.72:*
 
 # SSH
 #	* Avoid hacking abuse reports

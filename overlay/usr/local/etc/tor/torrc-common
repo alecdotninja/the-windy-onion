@@ -380,6 +380,9 @@ ExitPolicy reject 128.127.102.231:8080
 ExitPolicy reject 128.127.102.232:8080
 ExitPolicy reject 128.127.102.233:8080
 ExitPolicy reject 128.127.102.234:8080
+ExitPolicy reject 150.116.184.154:*
+ExitPolicy reject 150.116.77.192:*
+
 
 # SSH
 #	* Avoid hacking abuse reports

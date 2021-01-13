@@ -635,6 +635,35 @@ ExitPolicy reject6 2404:BF40:A420:0400::/56:*
 ExitPolicy reject 141.98.134.44:*
 ExitPolicy reject 150.116.86.190:*
 ExitPolicy reject 51.79.209.189:*
+ExitPolicy reject 178.250.10.94:*
+ExitPolicy reject 178.250.14.115:*
+ExitPolicy reject 178.250.9.157:*
+ExitPolicy reject 178.250.9.49:*
+ExitPolicy reject 178.250.9.72:*
+ExitPolicy reject 185.39.220.230:*
+ExitPolicy reject 194.34.225.14:*
+ExitPolicy reject 37.228.155.87:*
+ExitPolicy reject 77.75.249.119:*
+ExitPolicy reject 77.75.254.60:*
+ExitPolicy reject 85.158.181.11:*
+ExitPolicy reject 85.158.181.14:*
+ExitPolicy reject 85.158.181.15:*
+ExitPolicy reject 85.158.181.16:*
+ExitPolicy reject 85.158.181.17:*
+ExitPolicy reject 85.158.181.18:*
+ExitPolicy reject 85.158.181.19:*
+ExitPolicy reject 85.158.181.20:*
+ExitPolicy reject 85.158.181.23:*
+ExitPolicy reject 85.158.181.24:*
+ExitPolicy reject 85.158.181.25:*
+ExitPolicy reject 85.158.181.27:*
+ExitPolicy reject 85.158.181.28:*
+ExitPolicy reject 85.158.181.29:*
+ExitPolicy reject 85.158.181.31:*
+ExitPolicy reject 85.158.181.37:*
+ExitPolicy reject 85.158.181.76:*
+ExitPolicy reject 85.158.181.80:*
+ExitPolicy reject 85.158.183.214:*
 
 # Allow all other traffic by default
 ExitPolicy accept *:*

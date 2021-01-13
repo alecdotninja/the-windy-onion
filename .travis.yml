@@ -1,8 +1,18 @@
-language: minimal
-sudo: false
+os: linux
+dist: focal
+language: shell
+
+env:
+  global:
+    secure: g5W5cU7YthpimVEiUrm9mWx8Q+RW3ou9PKKBTlJ03mJgASzdF4kyeISxGKXayKZkZcBjnEx4okrjUO8TF42/cbnF/uHYL76cQRFal8FLRVDyiNb4KpfOQ7wv8qxCZ8F1rZlpB8O57JRJRBZy2jadAF9kTzxVAwcelHm2a4pQTd+NgKzZSAWztXP91ZdZpU0rw9XX0t7pDJgMPMi6JTBXGXo/WUigZ5R9Biy3C/mMNRbsPD5v7VOJ9AQea4Keef9T5YN2aK99wMK7e9ZGsDikaYTOTjwc2bn8arQwekHdnnWXTqd1BDHJY8UbXVDThJphUnXqYppCzrj3cLlEvld6RqaveD9G+N4itxgR6bBeC74wP+puMVCXNN3YQtCtWk5tVVhBnM5ELZEA6r5m0GONmzmqH/J+uRyi+u1iZrRLM6E+Re89rjY5nCvD30QcTjUA05kRENptKNqW+QH9WVA6NZRSfSge2+G2U1ezKWzJ7kH7t7paPlnweXiGwGgrXn04QMB8KUuGsgQWIJA+uwT+zF+Ig++wqXmVRxT66LHoXEYJbB4DXxxatva91eu8qYOjjHd9tXVvjYtBI4X8X6ruuvHC9utCXLZbAbNgUMJ6mmjhXNm5Lg3w9O0QyX9QNojJ5zxl3AO1Rbn9bGAPuURzF7JwjTNVw3ZLbH13oVJsvJE=
+
+before_install:
+  - openssl aes-256-cbc -pbkdf2 -k "$DEPLOY_SECRET" -in keys/deploy.key.enc -out keys/deploy.key -d
+  - chmod 600 keys/deploy.key
 
 deploy:
-  - provider: script
-    script: script/deploy
-    on:
-      branch: master
+  skip_cleanup: true
+  provider: script
+  script: script/deploy
+  on:
+    branch: master

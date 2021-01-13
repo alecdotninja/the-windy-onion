@@ -15,54 +15,6 @@ ipfw add pass ipv6-icmp from fe80::/10 to ff02::/16
 ipfw add pass ipv6-icmp from any to any icmp6types 1
 ipfw add pass ipv6-icmp from any to any icmp6types 2,135,136
 
-# never deal with traffic for reserved addresses
-ipfw add deny all from any to 10.0.0.0/8
-ipfw add deny all from 10.0.0.0/8 to any
-ipfw add deny all from any to 172.16.0.0/12
-ipfw add deny all from 172.16.0.0/12 to any
-ipfw add deny all from any to 192.168.0.0/16
-ipfw add deny all from 192.168.0.0/16 to any
-ipfw add deny all from any to 0.0.0.0/8
-ipfw add deny all from 0.0.0.0/8 to any
-ipfw add deny all from any to 169.254.0.0/16
-ipfw add deny all from 169.254.0.0/16 to any
-ipfw add deny all from any to 192.0.2.0/24
-ipfw add deny all from 192.0.2.0/24 to any
-ipfw add deny all from any to 224.0.0.0/4
-ipfw add deny all from 224.0.0.0/4 to any
-ipfw add deny all from fc00::/7 to any
-ipfw add deny all from any to fc00::/7
-ipfw add deny all from fec0::/10 to any
-ipfw add deny all from any to fec0::/10
-ipfw add deny all from ::ffff:0.0.0.0/96 to any
-ipfw add deny all from any to ::ffff:0.0.0.0/96
-ipfw add deny all from ::224.0.0.0/100 to any
-ipfw add deny all from any to ::224.0.0.0/100
-ipfw add deny all from ::127.0.0.0/104 to any
-ipfw add deny all from any to ::127.0.0.0/104
-ipfw add deny all from ::0.0.0.0/104 to any
-ipfw add deny all from any to ::0.0.0.0/104
-ipfw add deny all from ::255.0.0.0/104 to any
-ipfw add deny all from any to ::255.0.0.0/104
-ipfw add deny all from ::0.0.0.0/96 to any
-ipfw add deny all from any to ::0.0.0.0/96
-ipfw add deny all from 2002:e000::/20 to any
-ipfw add deny all from any to 2002:e000::/20
-ipfw add deny all from 2002:7f00::/24 to any
-ipfw add deny all from any to 2002:7f00::/24
-ipfw add deny all from 2002:0000::/24 to any
-ipfw add deny all from any to 2002:0000::/24
-ipfw add deny all from 2002:ff00::/24 to any
-ipfw add deny all from any to 2002:ff00::/24
-ipfw add deny all from 2002:0a00::/24 to any
-ipfw add deny all from any to 2002:0a00::/24
-ipfw add deny all from 2002:ac10::/28 to any
-ipfw add deny all from any to 2002:ac10::/28
-ipfw add deny all from 2002:c0a8::/32 to any
-ipfw add deny all from any to 2002:c0a8::/32
-ipfw add deny all from ff05::/16 to any
-ipfw add deny all from any to ff05::/16
-
 # allow fragments to pass through
 ipfw add pass all from any to any frag
 

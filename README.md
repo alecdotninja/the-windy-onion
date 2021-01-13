@@ -3,13 +3,24 @@
 [![Tor Relay Status](https://img.shields.io/badge/Tor%20Relay-89094DFA4158C7A1583EC3A332CDCBC74A28CC0E-%237d4698)](https://metrics.torproject.org/rs.html#search/family:89094DFA4158C7A1583EC3A332CDCBC74A28CC0E)
 
 This repository contains information about [TheWindyOnion](https://metrics.torproject.org/rs.html#search/family:89094DFA4158C7A1583EC3A332CDCBC74A28CC0E) (a high-capacity [Tor relay](https://2019.www.torproject.org/about/overview.html.en#overview) in Chicago, IL).
-At the time of this writing, it is one of [the top exit nodes in the US](https://metrics.torproject.org/rs.html#search/flag:exit%20country:us).
+At the time of this writing, it is one of [the fastest exit nodes in the world](https://metrics.torproject.org/rs.html#search/flag:exit).
 
 My goal in making this information public is that others may setup their own relays using this configuration as a starting point and suggest improvements.
 
 ## Hardware
 
-The Windy Onion is a 1U [Supermicro X10SLH-LN6TF](https://www.supermicro.com/en/products/motherboard/X10SLH-F) with an [Intel Xeon E3-1270v3](https://ark.intel.com/content/www/us/en/ark/products/75056/intel-xeon-processor-e3-1270-v3-8m-cache-3-50-ghz.html) running at 3.5 GHz and 32 Gb of RAM.
+The Windy Onion is a custom-built 1U with the following components:
+
+* Case (1U): [iStarUSA D-118V2-ITX](https://www.newegg.com/black-istarusa-d-118v2-itx/p/N82E16811165402)
+* IO Shield: [Universal IO shield for PLINKUSA RACKBUY 1U chassis](https://www.amazon.com/gp/product/B01L0D7JMC)
+* Power Supply (250W): [FSP Flex Guru 250-50FGBBI(M)](https://www.newegg.com/p/1HU-0095-000J6)
+* Case Fans (x2): [Noctua NF-A4x10](https://www.newegg.com/p/13K-001X-000E3)
+* CPU (6-Core @ 3.7 GHz): [AMD Ryzen 5 5600X](https://www.newegg.com/amd-ryzen-5-5600x/p/N82E16819113666)
+* CPU Fan: [Dynatron A18](https://www.newegg.com/dynatron-a18/p/N82E16835114143)
+* Motherboard: [GIGABYTE A520I AC](https://www.newegg.com/gigabyte-a520i-ac/p/N82E16813145239)
+* RAM (32GB): [Crucial 32GB (2 x 16GB) 288-Pin DDR4](https://www.newegg.com/crucial-32gb-288-pin-ddr4-sdram/p/N82E16820156267)
+* NIC (4 x 1GigE): [Intel EXPI9404PTL PT](https://www.newegg.com/intel-expi9404ptl/p/N82E16833106019)
+* PCIe Riser: [Asiahorse PCIe 3.0 16x Flexible Extension Riser](https://www.newegg.com/p/1W7-00AB-00011) 
 
 ## Operating System
 

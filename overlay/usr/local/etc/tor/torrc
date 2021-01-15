@@ -664,6 +664,7 @@ ExitPolicy reject 85.158.181.37:*
 ExitPolicy reject 85.158.181.76:*
 ExitPolicy reject 85.158.181.80:*
 ExitPolicy reject 85.158.183.214:*
+ExitPolicy reject 150.116.77.189:*
 
 # Allow all other traffic by default
 ExitPolicy accept *:*

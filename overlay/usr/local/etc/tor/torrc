@@ -17,10 +17,6 @@ OutboundBindAddress [2602:ffc8:1:18::1337]
 
 DirPortFrontPage /usr/local/etc/tor/tor-exit-notice.html
 
-BandwidthRate 100 MBytes
-BandwidthBurst 1 GBits
-MaxAdvertisedBandwidth 100 MBytes
-
 ExitRelay 1
 IPv6Exit 1
 
@@ -668,4 +664,3 @@ ExitPolicy reject 150.116.77.189:*
 
 # Allow all other traffic by default
 ExitPolicy accept *:*
-

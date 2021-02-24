@@ -709,6 +709,7 @@ ExitPolicy reject 91.107.214.68:21
 ExitPolicy reject 91.107.214.69:21
 ExitPolicy reject 172.245.241.177:*
 ExitPolicy reject 150.116.104.189:*
+ExitPolicy reject 51.75.179.124:*
 
 # Allow all other traffic by default
 ExitPolicy accept *:*

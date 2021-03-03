@@ -3,7 +3,7 @@
 [![Tor Relay Status](https://img.shields.io/badge/Tor%20Relay-89094DFA4158C7A1583EC3A332CDCBC74A28CC0E-%237d4698)](https://metrics.torproject.org/rs.html#search/family:89094DFA4158C7A1583EC3A332CDCBC74A28CC0E)
 
 This repository contains information about [TheWindyOnion](https://metrics.torproject.org/rs.html#search/family:89094DFA4158C7A1583EC3A332CDCBC74A28CC0E) (a high-capacity [Tor relay](https://2019.www.torproject.org/about/overview.html.en#overview) in Chicago, IL).
-At the time of this writing, it is one of [the fastest exit nodes in the world](https://metrics.torproject.org/rs.html#search/flag:exit).
+At the time of this writing, it is one of [the fastest exit nodes in the US](https://metrics.torproject.org/rs.html#search/flag:exit%20country:us).
 
 My goal in making this information public is that others may setup their own relays using this configuration as a starting point and suggest improvements.
 

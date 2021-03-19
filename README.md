@@ -24,7 +24,7 @@ The Windy Onion is a custom-built 1U with the following components:
 
 ## Operating System
 
-In order to support more diversity among relays, The Windy Onion runs [FreeBSD 12.1](https://www.freebsd.org/).
+In order to support [more diversity among relays](https://nusenu.github.io/OrNetStats/#os-distribution-relays), The Windy Onion runs [FreeBSD 12.1](https://www.freebsd.org/).
 
 At this time, updates are applied manually:
 

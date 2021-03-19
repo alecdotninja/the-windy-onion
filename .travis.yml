@@ -11,7 +11,7 @@ before_install:
   - chmod 600 keys/deploy.key
 
 deploy:
-  skip_cleanup: true
+  cleanup: false
   provider: script
   script: script/deploy
   on:

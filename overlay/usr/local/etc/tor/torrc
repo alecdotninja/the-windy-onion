@@ -897,6 +897,7 @@ ExitPolicy reject 213.187.103.177:3128
 ExitPolicy reject 213.187.103.178:3128
 ExitPolicy reject 213.187.103.179:3128
 ExitPolicy reject 213.187.103.180:3128
+ExitPolicy reject 45.15.179.90:*
 
 # Allow all other traffic by default
 ExitPolicy accept *:*

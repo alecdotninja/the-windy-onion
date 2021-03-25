@@ -35,6 +35,8 @@ ExitPolicy reject *:22
 ExitPolicy reject *:25
 ExitPolicy reject *:465
 ExitPolicy reject *:587
+ExitPolicy reject *:2525
+ExitPolicy reject *:2526
 
 # USENET
 #	* Avoid SPAM abuse reports

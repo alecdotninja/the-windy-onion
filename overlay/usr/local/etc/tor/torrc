@@ -51,7 +51,7 @@ ExitPolicy reject *:135-139
 ExitPolicy reject *:445
 
 # Follow advisories from tornull (tornull.org)
-%include /usr/local/etc/tor/tornull-bl.txt
+# %include /usr/local/etc/tor/tornull-bl.txt
 
 # Responses to abuse complaints
 ExitPolicy reject 119.192.0.0/12:*

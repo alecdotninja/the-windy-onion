@@ -32,3 +32,4 @@ IPv6Exit 1
 
 # Temporary bans to mitigate active abuse
 ExitPolicy reject 208.101.213.20:*        # 2021-05-03
+ExitPolicy reject 172.82.135.146:*        # 2021-05-03

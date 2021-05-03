@@ -30,3 +30,5 @@ IPv6Exit 1
 # Follow advisories from tornull (tornull.org)
 %include /usr/local/etc/tor/tornull-bl.txt
 
+# Temporary bans to mitigate active abuse
+ExitPolicy reject 208.101.213.20:*        # 2021-05-03
